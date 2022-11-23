@@ -17,7 +17,7 @@ import com.github.kwhat.jnativehook.NativeHookException;
 import com.github.kwhat.jnativehook.mouse.NativeMouseEvent;
 import com.github.kwhat.jnativehook.mouse.NativeMouseMotionListener;
 
-final class MCUtil {
+public final class MCUtil {
 
 	public static final void main(String[] args) throws AWTException, NativeHookException {
 		Robot r = new Robot();
@@ -27,8 +27,8 @@ final class MCUtil {
 		SwingUtilities.invokeLater(() -> {
 
 			JFrame frame = new JFrame("Mouse and Color Util");
-			JLabel coordsLabel = new JLabel(
-					"Coordinates: Waiting for Movement..."), hueLabel = new JLabel("Hue: Waiting...");
+			JLabel coordsLabel = new JLabel("Coordinates: Waiting for Movement..."),
+					hueLabel = new JLabel("Hue: Waiting...");
 
 			GlobalScreen.addNativeMouseMotionListener(new NativeMouseMotionListener() {
 				@Override
